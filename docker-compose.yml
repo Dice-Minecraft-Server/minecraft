@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    ports:
+      - "25565:25565"
+      - "8123:8123"
+      - "80:80"
+    volumes:
+      - "./:/data"
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      CONSOLE: "false"
+      SPAWN_PROTECTION: 0
+      DIFFICULTY: "hard"
+      ALLOW_FLIGHT: "TRUE"
+      ONLINE_MODE: "FALSE"
+      MOTD: "SheiUn's Paper Minecraft Server powered by Docker"
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: "sheiuncraft"
+      RCON_PORT: 28016
+      MAX_TICK_TIME: -1
+      ICON: "https://lh3.googleusercontent.com/-5giOzWw-TpE/XBUFimbQViI/AAAAAAAAAA8/aKSnwwa2JGIyeNZ26lNA3zIE5KHFKVTdACEwYBhgL/w280-h280-p/dd4fb6b1-acad-44fc-b3a1-cd940080661f"
+      MEMORY: "2G"
+    restart: always
+
