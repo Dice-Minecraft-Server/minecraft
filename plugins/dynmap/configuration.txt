@@ -42,7 +42,7 @@ components:
     sendhealth: true
     sendposition: true
     allowwebchat: true
-    webchat-interval: 5
+    webchat-interval: 0
     hidewebchatip: false
     trustclientname: false
     includehiddenplayers: false
@@ -111,21 +111,21 @@ components:
     # (optional) add spawn point markers to standard marker layer
     showspawn: true
     spawnicon: world
-    spawnlabel: "Spawn"
+    spawnlabel: "起始"
     # (optional) layer for showing offline player's positions (for 'maxofflinetime' minutes after logoff)
     showofflineplayers: false
-    offlinelabel: "Offline"
+    offlinelabel: "離線"
     offlineicon: offlineuser
     offlinehidebydefault: true
     offlineminzoom: 0
     maxofflinetime: 30
     # (optional) layer for showing player's spawn beds
     showspawnbeds: false
-    spawnbedlabel: "Spawn Beds"
+    spawnbedlabel: "起始床"
     spawnbedicon: bed
     spawnbedhidebydefault: true
     spawnbedminzoom: 0
-    spawnbedformat: "%name%'s bed"
+    spawnbedformat: "%name%的床"
     # (optional) show world border (vanilla 1.8+)
     showworldborder: true
     
@@ -158,7 +158,7 @@ components:
     # Optional - ordering priority in layer menu (low goes before high - default is 0)
     layerprio: 0
     # Optional - label for player marker layer (default is 'Players')
-    label: "Players"
+    label: "玩家"
     
   #- class: org.dynmap.ClientComponent
   #  type: digitalclock
@@ -172,7 +172,7 @@ components:
   # Mouse pointer world coordinate display
   - class: org.dynmap.ClientComponent
     type: coord
-    label: "Location"
+    label: "地標"
     hidey: false
     show-mcr: false
     
@@ -299,7 +299,7 @@ render-triggers:
   #- blockredstone
 
 # Title for the web page - if not specified, defaults to the server's name (unless it is the default of 'Unknown Server')
-#webpage-title: "My Awesome Server Map"
+webpage-title: "雪煾的麥塊地圖"
 
 # The path where the tile-files are placed.
 tilespath: web/tiles
