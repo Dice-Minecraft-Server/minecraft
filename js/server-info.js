@@ -1,4 +1,4 @@
-fetch('https://api.mcsrvstat.us/1/mc.sheiun.io').then(res => res.json()).then(status => {
+fetch('https://api.mcsrvstat.us/1/mcs.sheiun.me').then(res => res.json()).then(status => {
     let online = false
     if (status.hasOwnProperty('players')) {
         online = true
